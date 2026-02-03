@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advogada Previdenciária em Campo Grande RJ | Jéssica Moreira</title>
+    <meta name="description" content="Atuação em planejamento previdenciário e benefícios do INSS, com orientação clara e atendimento online. Campo Grande (Zona Oeste do RJ)." />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="https://storage.googleapis.com/msgsndr/7hzaWcGgawCV1WudlwA7/media/697cf7ef1fd8275915f324a0.jpeg" />
+    <link rel="apple-touch-icon" href="https://storage.googleapis.com/msgsndr/7hzaWcGgawCV1WudlwA7/media/697cf7ef1fd8275915f324a0.jpeg" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    
+    <script>
+      window.process = { env: { NODE_ENV: 'production' } };
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              olive: { 50: '#f4f5f1', 100: '#e7e9de', 200: '#d0d4bf', 300: '#adb494', 400: '#88916b', 500: '#69734e', 600: '#545d3e', 700: '#40472e', 800: '#343926', 900: '#2b301f', 950: '#161910' },
+              gold: { 50: '#fdfbe9', 100: '#fbf5c6', 200: '#f7e990', 300: '#f1d551', 400: '#ebbf23', 500: '#c59d4c', 600: '#947134', 700: '#7c5d26', 800: '#644b1f', 900: '#4c3917', 950: '#362711' }
+            },
+            fontFamily: { serif: ['"Libre Baskerville"', 'serif'], sans: ['Montserrat', 'sans-serif'] }
+          }
+        }
+      }
+    </script>
+    <style>
+      html { scroll-behavior: smooth; }
+      body { font-family: 'Montserrat', sans-serif; -webkit-font-smoothing: antialiased; margin: 0; }
+      h1, h2, h3 { font-family: 'Libre Baskerville', serif; }
+      .legal-blob { border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%; }
+      .subtle-lift { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+      .subtle-lift:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1); }
+      #loader { position: fixed; inset: 0; background: white; display: flex; flex-direction: column; align-items: center; justify-content: center; z-index: 9999; transition: opacity 0.5s ease; }
+      .loader-logo { width: 80px; height: 80px; border-radius: 20px; margin-bottom: 20px; animation: pulse 2s infinite ease-in-out; }
+      @keyframes pulse { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.1); opacity: 0.7; } }
+      @keyframes loading-bar { 0% { transform: scaleX(0); transform-origin: left; } 50% { transform: scaleX(1); transform-origin: left; } 51% { transform: scaleX(1); transform-origin: right; } 100% { transform: scaleX(0); transform-origin: right; } }
+    </style>
+    
+    <script type="importmap">
+    {
+      "imports": {
+        "react": "https://esm.sh/react@^19.2.4",
+        "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+        "react/": "https://esm.sh/react@^19.2.4/",
+        "lucide-react": "https://esm.sh/lucide-react@^0.563.0"
+      }
+    }
+    </script>
+  <link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="loader">
+      <img src="https://storage.googleapis.com/msgsndr/7hzaWcGgawCV1WudlwA7/media/697cf7ef1fd8275915f324a0.jpeg" alt="Logo" class="loader-logo">
+      <div class="w-48 h-1 bg-olive-50 rounded-full overflow-hidden">
+        <div class="w-full h-full bg-gold-500 origin-left animate-[loading-bar_1.5s_infinite_ease-in-out]"></div>
+      </div>
+    </div>
+    <div id="root"></div>
+    <!-- data-presets sem 'env' para evitar erro de targets -->
+    <script type="text/babel" data-presets="react,typescript" data-type="module" src="./index.tsx"></script>
+    <script>
+      window.addEventListener('load', () => {
+        setTimeout(() => {
+          const loader = document.getElementById('loader');
+          if (loader) { loader.style.opacity = '0'; setTimeout(() => loader.remove(), 500); }
+        }, 1500);
+      });
+    </script>
+  <script type="module" src="/index.tsx"></script>
+</body>
+</html>
